@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 
 import librosa 
 
-
 from STFT import create_sftf
+from SampleCompse import decompose_stft
 
 
 def main():
@@ -17,8 +17,8 @@ def main():
 
     sa = data["Sa"]    
     
-    create_sftf(sa[0,0])
-    
+    stft, spectrograms = create_sftf(sa[0,0])
+    decompose_stft(spectrograms[0])
 
     x = 0
     pass 
